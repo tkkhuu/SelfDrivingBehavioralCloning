@@ -3,7 +3,10 @@
 This is a project I completed from Udacity Self Drving Car Nanodegree. The purpose of this project is to train a car in simulation to drive using camera data.
 
 ## Network Architecture
-I used the architecture proposed by NVIDIA with some modification to train the car to drive. The detail of the network can be found [here](https://devblogs.nvidia.com/deep-learning-self-driving-cars/).
+I used the architecture proposed by NVIDIA with some modification to train the car to drive.
+![alt text][NVIDIA_DNN]
+
+The detail of the network can be found [here](https://devblogs.nvidia.com/deep-learning-self-driving-cars/).
 Specifically, the model consists of an input layer which takes in images of size 160x320x3. The images are then normalized for 0 mean. The images are then passed through a cropping layer to get rid of the part of the images that do not contribute to the driving task, such as the sky, trees. The images are then passed through 5 convolutional layers with size 5x5x24, 5x5x36, 3x3x48, 3x3x64 respectively, each activated with a RELU function. A dropout layer is then added to prevent the network from overfitting the track. The images are then flattened into vectors and passed another dropout layer. Finally, the images are then passed through 3 fully connected layers, also activated with a RELU function before the output layer.
 
 ## Training Data
@@ -39,4 +42,4 @@ The following table present the list of parameters used in the final tuning.
 | Pixels Cropped From Right               | 0             |
 
 
-
+# ![NVIDIA_DNN](https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/NVIDIA_DNN.png)
