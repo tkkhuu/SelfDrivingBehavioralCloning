@@ -24,16 +24,20 @@ First, I trained the network using only the center camera and images from the fi
 An option was to add training examples that record images of the car recovering to the center. However, I decided to try using the side cameras for this situation first before adding images and it yielded the result I wanted. All that left was to tune the steering wheel correction value.
 
 The road in the second track was a little different from the first track. It was split into two lanes and I tried to stay in the right when recording my driving in the second track. One interesting behavior I observed after adding images from the second track to the train data set was that sometimes the car tends to stay close to the lanes (both left and right). I conclude this was the result of trying to stay in the right lane because when I was staying in the right lane, the white lines are very close to the car.
+
 ![alt text][tight_space]
 
 I also observe that the car position itself really well when the lines are clear on the sides.
 Better performances with clear side lines.
+
 ![alt text][clear_side_lines]
 
 Car had difficulty in this type of curve
+
 ![alt text][unclear_side_lines]
 
 The images were cropped such that all the portion of the road is visible, this is for the network to see whether there is left or right curve ahead.
+
 ![alt text][cropped_img]
 
 The following table present the list of parameters used in the final tuning.
