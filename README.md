@@ -24,7 +24,8 @@ I also observe that the car position itself really well when the lines are clear
 The images were cropped such that all the portion of the road is visible, this is for the network to see whether there is left or right curve ahead.
 <insert images>
 
-The following table present the list of parameters used in the final tuning
+The following table present the list of parameters used in the final tuning.
+
 | Paramater                               | Value         |
 | ----------------------------------------|---------------|
 | Batch Size                              | 16            |
