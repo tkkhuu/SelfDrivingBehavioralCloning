@@ -2,9 +2,13 @@
 
 This is a project I completed from Udacity Self Drving Car Nanodegree. The purpose of this project is to train a car in simulation to drive using camera data.
 
+## Simulation
+The simulation environment was provided by Udacity. There two tracks available for training and testing
+![alt text][first_track]
+![alt text][second_track]
+
 ## Network Architecture
 I used the architecture proposed by NVIDIA with some modification to train the car to drive.
-
 ![alt text][NVIDIA_DNN]
 
 The detail of the network can be found [here](https://devblogs.nvidia.com/deep-learning-self-driving-cars/).
@@ -20,13 +24,17 @@ First, I trained the network using only the center camera and images from the fi
 An option was to add training examples that record images of the car recovering to the center. However, I decided to try using the side cameras for this situation first before adding images and it yielded the result I wanted. All that left was to tune the steering wheel correction value.
 
 The road in the second track was a little different from the first track. It was split into two lanes and I tried to stay in the right when recording my driving in the second track. One interesting behavior I observed after adding images from the second track to the train data set was that sometimes the car tends to stay close to the lanes (both left and right). I conclude this was the result of trying to stay in the right lane because when I was staying in the right lane, the white lines are very close to the car.
-
+![alt text][tight_space]
 
 I also observe that the car position itself really well when the lines are clear on the sides.
-<insert images>
+Better performances with clear side lines.
+![alt text][clear_side_lines]
+
+Car had difficulty in this type of curve
+![alt text][unclear_side_lines]
 
 The images were cropped such that all the portion of the road is visible, this is for the network to see whether there is left or right curve ahead.
-<insert images>
+![alt text][cropped_img]
 
 The following table present the list of parameters used in the final tuning.
 
@@ -44,3 +52,9 @@ The following table present the list of parameters used in the final tuning.
 
 
 [NVIDIA_DNN]: https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/NVIDIA_DNN.png "NVIDIA Proposed DNN"
+[cropped_img]: https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/cropped_img.png "Cropped Image"
+[clear_side_lines]: https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/clear_side_lines.png "Clear Side Lines"
+[unclear_side_lines]: https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/unclear_side_lines.png "Unclear Side Lines"
+[tight_space]: https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/tight_space.png "Tight Space"
+[first_track]: https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/first_track.png "First Track"
+[second_track]: https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/second_track.png "Second Track"
