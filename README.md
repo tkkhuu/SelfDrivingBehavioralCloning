@@ -4,6 +4,7 @@ This is a project I completed from Udacity Self Drving Car Nanodegree. The purpo
 
 ## Network Architecture
 I used the architecture proposed by NVIDIA with some modification to train the car to drive.
+
 ![alt text][NVIDIA_DNN]
 
 The detail of the network can be found [here](https://devblogs.nvidia.com/deep-learning-self-driving-cars/).
