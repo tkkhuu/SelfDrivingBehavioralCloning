@@ -26,7 +26,7 @@ The images were cropped such that all the portion of the road is visible, this i
 
 The following table present the list of parameters used in the final tuning
 | Paramater                               | Value         |
-| ----------------------------------------|:-------------:|
+| ----------------------------------------|---------------|
 | Batch Size                              | 16            |
 | Number of Epochs                        | 8             |
 | Steering Wheel Correction               | 0.25          |
