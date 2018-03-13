@@ -5,9 +5,6 @@ This is a project I completed from Udacity Self Drving Car Nanodegree. The purpo
 ## Simulation
 The simulation environment was provided by Udacity. There two tracks available for training and testing
 
-![alt text][first_track]
-![alt text][second_track]
-
 ## Network Architecture
 I used the architecture proposed by NVIDIA with some modification to train the car to drive.
 ![alt text][NVIDIA_DNN]
