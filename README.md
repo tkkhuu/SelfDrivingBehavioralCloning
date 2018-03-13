@@ -2,7 +2,8 @@
 
 This is a project I completed from Udacity Self Drving Car Nanodegree. The purpose of this project is to train a car in simulation to drive using camera data.
 
-<a href="https://www.youtube.com/watch?v=wRnFrW5-yrgtarget="_blank"><img src="http://img.youtube.com/vi/wRnFrW5-yrg/0.jpg" 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=wRnFrW5-yrg
+" target="_blank"><img src="http://img.youtube.com/vi/wRnFrW5-yrg/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 ## Simulation
