@@ -43,4 +43,4 @@ The following table present the list of parameters used in the final tuning.
 | Pixels Cropped From Right               | 0             |
 
 
-# ![NVIDIA_DNN](https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/NVIDIA_DNN.png)
+# ![NVIDIA_DNN]: https://raw.github.com/tkkhuu/SelfDrivingBehavioralCloning/master/readme_img/NVIDIA_DNN.png
