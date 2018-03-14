@@ -1,5 +1,5 @@
-import DNNBuilder
-import DataLoader
+import TKDNNUtil/DNNBuilder
+import TKDNNUtil/DataLoader
 
 from sklearn.model_selection import train_test_split
 
