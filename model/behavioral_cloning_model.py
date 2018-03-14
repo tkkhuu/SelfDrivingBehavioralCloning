@@ -1,5 +1,5 @@
-import TKDNNUtil/DNNBuilder
-import TKDNNUtil/DataLoader
+import TKDNNUtil.DNNBuilder as DNNBuilder
+import DataLoaderBC
 
 from sklearn.model_selection import train_test_split
 
@@ -7,8 +7,8 @@ def normalize_image(input_img):
     return (input_img / 255.0) - 0.5
 
 # Loading data
-data_loader = DataLoader.DataLoader('../SimData/driving_log.csv')
-data = data_loader.LoadData()
+data_loader = DataLoaderBC.DataLoaderBC()
+data = data_loader.LoadCSVData('../SimData/driving_log.csv')
 
 # Splitting train and validation data
 train_samples, validation_samples = train_test_split(data, test_size=0.2)
@@ -48,10 +48,10 @@ layers = (
                 {'layer_type': 'dropout', 'keep_prob': 0.4},
                 {'layer_type': 'flatten'},
                 {'layer_type': 'dropout', 'keep_prob': 0.5},
-                {'layer_type': 'fully connected', 'output_dim': 100, 'activation': 'relu'},
-                {'layer_type': 'fully connected', 'output_dim': 50, 'activation': 'relu'},
-                {'layer_type': 'fully connected', 'output_dim': 10, 'activation': 'relu'},
-                {'layer_type': 'fully connected', 'output_dim': 1}
+                {'layer_type': 'fully connected', 'units': 100, 'activation': 'relu'},
+                {'layer_type': 'fully connected', 'units': 50, 'activation': 'relu'},
+                {'layer_type': 'fully connected', 'units': 10, 'activation': 'relu'},
+                {'layer_type': 'fully connected', 'units': 1}
         )
     
     
@@ -59,4 +59,5 @@ mydnn = DNNBuilder.DNNSequentialModelBuilder2D({'input_shape': (160, 320, 3), 'm
 mydnn.Initialize()
 mydnn.Compile('mse', 'adam')
 print(mydnn)
-mydnn.TrainAndSave(train_generator, validation_generator, n_train, n_valid, EPOCHS)
+mydnn.FitGenerator(train_generator, validation_data=validation_generator, steps_per_epoch=n_train, validation_steps=n_valid, epochs=EPOCHS)
+mydnn.SaveModel('../model.h5')
